@@ -24,8 +24,7 @@ public class TestBase  {
 	public TestBase() {
 		try {
 			prop=new Properties();
-			FileInputStream ip=new FileInputStream("C:\\Users\\sony\\eclipse-workspace\\FreeCRMTest\\src\\main\\"
-					+ "java\\com\\crm\\qa\\config\\config.properties");
+			FileInputStream ip=new FileInputStream("C:\\Users\\sony\\git\\FirstProject\\FreeCRMTest\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
 			prop.load(ip);
 		}
 		catch(FileNotFoundException e){
@@ -41,7 +40,7 @@ public class TestBase  {
 	public static void intialization() {
 		String browserName = prop.getProperty("browser");
 		if(browserName.equals("chrome")) {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\sony\\eclipse-workspace\\FreeCRMTest\\driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\sony\\git\\FirstProject\\FreeCRMTest\\driver\\chromedriver.exe");
 		driver=new ChromeDriver();
 		}
 		else if(browserName.equals("FF")) {
